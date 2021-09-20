@@ -10,10 +10,11 @@ location  = 1#2为北楼，一为南楼
 
 roomid = 203 #房间号
 
+type1 = 2 #南区的同学1为照明，2为空调 
 
 webhook = 'https://oapi.dingtalk.com/robot/send?access_token=XXXXXXX' #替换为自己的钉钉机器人的wehook
 secret = 'XXXXXX'  # 替换为自己的钉钉机器人的SECREAT
-room = "300"+str(area)+str(roomid)+str(location)+"2"
+room = "300"+str(area)+str(roomid)+str(location)+("1" if area <= 5 else str(type1))
 flag  = False
 timenow = time.localtime(time.time()).tm_hour
 myheaders = {"User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Mobile Safari/537.36"
