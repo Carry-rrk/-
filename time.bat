@@ -1,3 +1,3 @@
 @echo off
-start pythonw 薰化路某校电费.py
+start pythonw 001.py
 exit
